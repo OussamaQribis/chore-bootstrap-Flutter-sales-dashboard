@@ -1,6 +1,6 @@
 # Sales Dashboard (Flutter) — Tableau de bord des ventes
 
-## 🇫🇷 Présentation (FR)
+## Présentation
 Application Flutter multi-plateforme (Android / iOS) qui affiche :
 - Les produits
 - Les plus vendus / moins vendus
