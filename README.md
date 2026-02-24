@@ -1,17 +1,33 @@
-# product_sales_dashboard
+# Sales Dashboard (Flutter) — Tableau de bord des ventes
 
-A new Flutter project.
+## 🇫🇷 Présentation (FR)
+Application Flutter multi-plateforme (Android / iOS) qui affiche :
+- Les produits
+- Les plus vendus / moins vendus
+- Selon une période (DateRange) définie par l'utilisateur
+- Avec une base **de données locale (mock)** aujourd'hui, prête à basculer vers une **API** plus tard
 
-## Getting Started
+### ✨ Fonctionnalités
+- Filtre par période (DateRange Picker)
+- Top / Flop produits
+- Vue “Comparaison” (barres/progression)
+- Internationalisation **dynamique** (AR/FR) avec support RTL
 
-This project is a starting point for a Flutter application.
+### 🧱 Architecture
+Le projet est structuré pour permettre de remplacer facilement la source de données :
+- `SalesRepository` (contrat)
+- `LocalSalesRepository` (mock data, actuel)
+- `ApiSalesRepository` (prévu, plus tard)
 
-A few resources to get you started if this is your first Flutter project:
+### 📁 Structure du dossier (résumé)
+- `lib/app/` : point d’entrée UI (MaterialApp, locale, delegates)
+- `lib/core/localization/` : i18n (langues + traductions + contrôleur)
+- `lib/features/sales/`
+  - `domain/` : models + repository contract
+  - `data/` : local/api repositories
+  - `presentation/` : pages + controller
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 🚀 Démarrage
+```bash
+flutter pub get
+flutter run
